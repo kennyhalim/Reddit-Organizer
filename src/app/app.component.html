@@ -27,6 +27,23 @@
       <div class="title">
         <h1>Reddit Organizer</h1>
       </div>
+        <br><br>
+        <div *ngIf="testUser.userName">
+          <div class="title">
+            <h2>Here are 3 top posts in each of your subreddit</h2>
+            <div *ngFor="let subreddit of testUser.subreddit">
+              <h3>{{subreddit}}</h3>
+              <p>Blabla</p>
+              <p>Blabla</p>
+              <p>blalba</p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="testUser.userName.length < 1">
+          <div class="title">
+            <h2>Here are the popular post for today!</h2>
+          </div>
+        </div>
     </div>
   </div>
 
