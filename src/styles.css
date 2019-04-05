@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
 .title {
   text-align: center;
 }
 
-body {
-  padding-top: 20px;
+.content {
+  padding-top: 10px;
 }
 
 #logo {
