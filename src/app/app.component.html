@@ -1,5 +1,19 @@
-<div class="container">
-  <h1>Test</h1>
 
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2" id="sidebar">
+      <img id="logo" src="https://ya-webdesign.com/images/reddit-alien-png-3.png">
+      <p>Welcome, {{userName}}<p>
+      <form>
+        <input [(ngModel)]="userName" type="text" name="user">
+      </form>
+    </div>
+    <div class="col-md-10">
+      <div class="title">
+        <h1>Reddit Organizer</h1>
+      </div>
+    </div>
+  </div>
 
 </div>

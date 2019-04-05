@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+}
+
+body {
+  padding-top: 20px;
+}
+
+#logo {
+  height:80px;
+  width:80px;
+}
+
+#sidebar {
+  text-align: center;
+}

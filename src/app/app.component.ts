@@ -6,5 +6,5 @@ import { UserInfo } from '../model/userInfo.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Reddit Organizer';
 }
