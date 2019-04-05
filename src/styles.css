@@ -3,14 +3,19 @@
 body {
   font-family: 'PT Sans', sans-serif;
 }
-
+.container {
+  overflow: hidden;
+}
 .title {
   text-align: center;
 }
 
-.content {
-  padding-top: 10px;
+.navbar {
+  padding-bottom: 10px;
 }
+/* .content {
+  padding-top: 10px;
+} */
 
 #logo {
   height:80px;
@@ -18,7 +23,16 @@ body {
 }
 
 #sidebar {
+  padding-top: 10px;
   text-align: center;
+  height:100%;
+  background-color: #CAE2F9;
+  margin-bottom: -5000px; /* any large number will do */
+  padding-bottom: 500px;
+}
+
+.content {
+  padding-top: 10px;
 }
 
 .testUser input {
