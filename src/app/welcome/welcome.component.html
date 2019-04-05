@@ -29,7 +29,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search For Post(s)" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
@@ -43,7 +43,7 @@
         <p>Welcome, {{testUser.userName}}<p>
         <h4>Your subreddits:</h4>
         <div *ngFor="let subreddit of testUser.subreddit">
-          <p>{{subreddit}}</p>
+          {{subreddit}}
         </div>
       </div>
       <div *ngIf="testUser.userName.length < 1">

@@ -8,7 +8,7 @@ import { UserInfo } from '../userInfo.model';
 })
 export class WelcomeComponent implements OnInit {
   title = 'Reddit Organizer';
-  testUser = new UserInfo('Test', ['reddevils', 'soccer'], 1);
+  testUser = new UserInfo('Test', ['funny', 'soccer'], 1);
 
   // submitFormUser(userName: string) {
   //   // console.log(this.testUser.userName);
