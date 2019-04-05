@@ -13,5 +13,7 @@ export class AppComponent {
 
   submitFormUser(userName: string) {
     this.testUser = new UserInfo(userName, ['reddevils', 'soccer'], 1);
+    this.testUser.loggedIn = true;
+    console.log(this.testUser.loggedIn);
   }
 }

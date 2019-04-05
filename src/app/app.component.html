@@ -5,15 +5,22 @@
     <div class="col-md-2" id="sidebar">
       <img id="logo" src="https://ya-webdesign.com/images/reddit-alien-png-3.png">
       <br><br>
-      <p>Welcome, {{testUser.userName}}<p>
-      <form>
-        <div class="form-group">
-        <label>Username:</label>
-        <input #userName type="text">
-        </div>
-        <button (click)="submitFormUser(userName.value)">Log In</button>
-        <button>Sign Up</button>
-      </form>
+      <div *ngIf="testUser.userName">
+        <p>Welcome, {{testUser.userName}}<p>
+      </div>
+        <p> Welcome</p>
+      <!-- <div *ngIf="testUser.loggedIn"> -->
+        <form>
+          <div class="form-group">
+          <label>Username:</label>
+          <input #userName type="text">
+          </div>
+          <button (click)="submitFormUser(userName.value)">Log In</button>
+          <button>Sign Up</button>
+        </form>
+
+
+      <!-- </div> -->
     </div>
     <div class="col-md-10">
       <div class="title">
