@@ -4,9 +4,15 @@
   <div class="row">
     <div class="col-md-2" id="sidebar">
       <img id="logo" src="https://ya-webdesign.com/images/reddit-alien-png-3.png">
-      <p>Welcome, {{userName}}<p>
+      <br><br>
+      <p>Welcome, {{testUser.userName}}<p>
       <form>
-        <input [(ngModel)]="userName" type="text" name="user">
+        <div class="form-group">
+        <label>Username:</label>
+        <input #userName type="text">
+        </div>
+        <button (click)="submitFormUser(userName.value)">Log In</button>
+        <button>Sign Up</button>
       </form>
     </div>
     <div class="col-md-10">
