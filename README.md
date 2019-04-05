@@ -1,27 +1,52 @@
-# Reddit
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+# _Reddit-Organizer_
 
-## Development server
+#### Reddit Organizer, 03/20/19
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### By **Kenny Halim**
 
-## Code scaffolding
+### Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_Epicodus Week 11 Individual Project_
 
-## Build
+A program where user can input their birthday and other things so that the program can out their age in different planets as well as their life expectancy.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+|| Behavior  | Input  | Output  |
+|---|---|---|---|
+|1.| User input birthday, how many times they drink soda, how many times they eat junk food, how many times they eat vegetables and how many times they do sport  | 05/22/1998,3,3,1,4   | 20,4.8,12,4,37.6,237.2,84 |
+|2.| Player input empty field |  | doesnt allow user to input empty |
 
-## Running unit tests
+## Setup/Installation Requirements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Requirements Software
 
-## Running end-to-end tests
+_Node.js, Karma and Jasmine are required for the npm commands to run. Must have Node.js installed. No servers are required for the running of this application._
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Clone this repository: $ git clone https://github.com/kennyhalim/RPG
+2. Change into the root directory in the terminal.
+3. Input npm install into the terminal to install dependancies.
+4. Input npm run build to build the application.
+5. Input npm run start to start the application.
+6. Input npm test to test the application.
 
-## Further help
+To run the tests, use these commands: $ cd Super-Galactic-Age-Calculator $ npm test
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To run the program on chrome, use these commands: $ cd Super-Galactic-Age-Calculator $ npm run start
+
+## Known Bugs
+
+_No known bugs._
+
+## Support and contact details
+
+ kennyhalim98@gmail.com        
+
+## Technologies Used
+
+_HTML, CSS, Bootstrap, Javascript, JQuery, Javascript WebPack, Node Package Manager, Jasmine, Karma._
+
+### License
+
+*MIT License*
+
+Copyright (c) 2019 **_Kenny Halim_**
