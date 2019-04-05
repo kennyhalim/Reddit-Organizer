@@ -13,27 +13,27 @@ A program with Angular where a user can see all of their favorite subreddits and
 
 Eventually, the user will be able to log in and still keep their favorite subreddits while also be able to add new post, edit their post, and delete their post.
 
-|| Behavior  | Input  | Output  |
-|---|---|---|---|
-|1.| User input birthday, how many times they drink soda, how many times they eat junk food, how many times they eat vegetables and how many times they do sport  | 05/22/1998,3,3,1,4   | 20,4.8,12,4,37.6,237.2,84 |
-|2.| Player input empty field |  | doesnt allow user to input empty |
+## Specs
+1. Get to a splash page where user can see most popular post, navigation bar, their login page(eventually) and chatbox.
+2. New Route to signup/login to the account.
+3. New Route to show all of the feed.
+4. New route to show specific subreddit posts.
+5. New Route to add new post.
+6. New Route to delete post.
+7. New route to edit post.
+8. New route to edit user info.
+9. New route to show about the program.
 
 ## Setup/Installation Requirements
 
 Requirements Software
 
-_Node.js, Karma and Jasmine are required for the npm commands to run. Must have Node.js installed. No servers are required for the running of this application._
-
-1. Clone this repository: $ git clone https://github.com/kennyhalim/RPG
-2. Change into the root directory in the terminal.
-3. Input npm install into the terminal to install dependancies.
-4. Input npm run build to build the application.
-5. Input npm run start to start the application.
-6. Input npm test to test the application.
-
-To run the tests, use these commands: $ cd Super-Galactic-Age-Calculator $ npm test
-
-To run the program on chrome, use these commands: $ cd Super-Galactic-Age-Calculator $ npm run start
+_Node.js, Angular are required in order for the program to run. Please read the documentation ahead before cloning this repo.
+If you have already have it set, please do the following_
+1. git clone *nameofthisrepo*.
+2. cd into *nameofthisrepo*.
+3. ng build.
+4. ng serve --open
 
 ## Known Bugs
 
@@ -45,7 +45,7 @@ _No known bugs._
 
 ## Technologies Used
 
-_HTML, CSS, Bootstrap, Javascript, JQuery, Javascript WebPack, Node Package Manager, Jasmine, Karma._
+_HTML, CSS, Bootstrap, Javascript, JQuery, Javascript WebPack, Node Package Manager, Jasmine, Karma., Angular, Typescript._
 
 ### License
 
