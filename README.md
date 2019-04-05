@@ -7,9 +7,11 @@
 
 ### Description
 
-_Epicodus Week 11 Individual Project_
+_Epicodus Week 13 Individual Project_
 
-A program where user can input their birthday and other things so that the program can out their age in different planets as well as their life expectancy.
+A program with Angular where a user can see all of their favorite subreddits and show that into their feed.
+
+Eventually, the user will be able to log in and still keep their favorite subreddits while also be able to add new post, edit their post, and delete their post.
 
 || Behavior  | Input  | Output  |
 |---|---|---|---|
