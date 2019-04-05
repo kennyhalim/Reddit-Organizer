@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" routerLink="">Tidder</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Subreddits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="about">About Us</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2" id="sidebar">
+      <img id="logo" src="https://ya-webdesign.com/images/reddit-alien-png-3.png">
+      <br><br>
+      <div *ngIf="testUser.userName">
+        <p>Welcome, {{testUser.userName}}<p>
+        <h4>Your subreddits:</h4>
+        <div *ngFor="let subreddit of testUser.subreddit">
+          <p>{{subreddit}}</p>
+        </div>
+      </div>
+      <div *ngIf="testUser.userName.length < 1">
+        <form>
+          <div class="form-group testUser">
+          <label>Username:</label>
+          <input #userName type="text">
+          </div>
+          <button (click)="submitFormUser(userName.value)">Log In</button>
+          <button>Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-10 content">
+      <div class="title">
+        <h1>Reddit Organizer</h1>
+      </div>
+        <br>
+        <div *ngIf="testUser.userName">
+          <div class="title">
+            <h2>Here are 3 top posts in each of your subreddit</h2>
+            <div *ngFor="let subreddit of testUser.subreddit">
+              <div class="card top3Post">
+                <h4 class="card-header">{{subreddit}}</h4>
+                <div class="card-body">
+                  <h5 class="card-title">Post1</h5>
+                  <p class="card-text">Post1</p>
+                </div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="testUser.userName.length < 1">
+          <div class="title">
+            <h2>Here are the popular post for today!</h2>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>

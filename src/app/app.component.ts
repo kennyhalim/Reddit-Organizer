@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserInfo } from '../model/userInfo.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,13 +6,13 @@ import { UserInfo } from '../model/userInfo.model';
 })
 export class AppComponent {
   title = 'Reddit Organizer';
-  testUser = new UserInfo('', [ ], 1);
-
-  submitFormUser(userName: string) {
-    // console.log(this.testUser.userName);
-    // console.log(this.testUser.userName.length);
-    this.testUser = new UserInfo(userName, ['reddevils', 'soccer'], 1);
-    this.testUser.loggedIn = true;
-    console.log(this.testUser.loggedIn);
-  }
+  // testUser = new UserInfo('', [ ], 1);
+  //
+  // submitFormUser(userName: string) {
+  //   // console.log(this.testUser.userName);
+  //   // console.log(this.testUser.userName.length);
+  //   this.testUser = new UserInfo(userName, ['reddevils', 'soccer'], 1);
+  //   this.testUser.loggedIn = true;
+  //   console.log(this.testUser.loggedIn);
+  // }
 }

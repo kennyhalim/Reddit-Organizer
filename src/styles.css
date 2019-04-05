@@ -13,9 +13,16 @@ body {
 .navbar {
   padding-bottom: 10px;
 }
-/* .content {
-  padding-top: 10px;
-} */
+
+.aboutUsP {
+  width:50%;
+  display: inline-block;
+}
+
+.aboutUs {
+  padding-top: 15px;
+  text-align: center;
+}
 
 #logo {
   height:80px;
