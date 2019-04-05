@@ -24,6 +24,9 @@ Eventually, the user will be able to log in and still keep their favorite subred
 8. New route to edit user info.
 9. New route to show about the program.
 
+## To DO
+1. Get API access to reddit.
+
 ## Setup/Installation Requirements
 
 Requirements Software
