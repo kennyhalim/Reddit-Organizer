@@ -8,8 +8,7 @@
       <div *ngIf="testUser.userName">
         <p>Welcome, {{testUser.userName}}<p>
       </div>
-        <p> Welcome</p>
-      <!-- <div *ngIf="testUser.loggedIn"> -->
+      <div *ngIf="testUser.userName.length < 1">
         <form>
           <div class="form-group">
           <label>Username:</label>
@@ -18,9 +17,7 @@
           <button (click)="submitFormUser(userName.value)">Log In</button>
           <button>Sign Up</button>
         </form>
-
-
-      <!-- </div> -->
+      </div>
     </div>
     <div class="col-md-10">
       <div class="title">

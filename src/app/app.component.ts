@@ -7,11 +7,11 @@ import { UserInfo } from '../model/userInfo.model';
 })
 export class AppComponent {
   title = 'Reddit Organizer';
-
-  testUser: UserInfo;
-
+  testUser = new UserInfo('', [ ], 1);
 
   submitFormUser(userName: string) {
+    // console.log(this.testUser.userName);
+    // console.log(this.testUser.userName.length);
     this.testUser = new UserInfo(userName, ['reddevils', 'soccer'], 1);
     this.testUser.loggedIn = true;
     console.log(this.testUser.loggedIn);
