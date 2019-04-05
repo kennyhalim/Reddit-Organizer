@@ -14,7 +14,7 @@
       </div>
       <div *ngIf="testUser.userName.length < 1">
         <form>
-          <div class="form-group">
+          <div class="form-group testUser">
           <label>Username:</label>
           <input #userName type="text">
           </div>
@@ -32,10 +32,13 @@
           <div class="title">
             <h2>Here are 3 top posts in each of your subreddit</h2>
             <div *ngFor="let subreddit of testUser.subreddit">
-              <h3>{{subreddit}}</h3>
-              <p>Blabla</p>
-              <p>Blabla</p>
-              <p>blalba</p>
+              <div class="card top3Post">
+                <h4 class="card-header">{{subreddit}}</h4>
+                <div class="card-body">
+                  <h5 class="card-title">Post1</h5>
+                  <p class="card-text">Post1</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

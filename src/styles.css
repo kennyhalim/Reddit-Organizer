@@ -14,3 +14,13 @@ body {
 #sidebar {
   text-align: center;
 }
+
+.testUser input {
+  width: 95%;
+}
+
+.card {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+}
