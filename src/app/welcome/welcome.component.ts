@@ -8,15 +8,15 @@ import { UserInfo } from '../userInfo.model';
 })
 export class WelcomeComponent implements OnInit {
   title = 'Reddit Organizer';
-  testUser = new UserInfo('', [ ], 1);
+  testUser = new UserInfo('Test', ['reddevils', 'soccer'], 1);
 
-  submitFormUser(userName: string) {
-    // console.log(this.testUser.userName);
-    // console.log(this.testUser.userName.length);
-    this.testUser = new UserInfo(userName, ['reddevils', 'soccer'], 1);
-    this.testUser.loggedIn = true;
-    console.log(this.testUser.loggedIn);
-  }
+  // submitFormUser(userName: string) {
+  //   // console.log(this.testUser.userName);
+  //   // console.log(this.testUser.userName.length);
+  //   this.testUser =
+  //   this.testUser.loggedIn = true;
+  //   console.log(this.testUser.loggedIn);
+  // }
   constructor() { }
 
   ngOnInit() {
