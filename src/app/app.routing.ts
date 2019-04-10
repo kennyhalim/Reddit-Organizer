@@ -4,7 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { SubredditComponent } from './subreddit/subreddit.component';
 import { ReddevilsComponent } from './reddevils/reddevils.component';
-
+import { AccountComponent } from './account/account.component';
 const appRoutes: Routes = [
   {
     path: '',
@@ -17,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'subreddits',
     component: SubredditComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   },
   {
     path: 'subreddits/reddevils',
