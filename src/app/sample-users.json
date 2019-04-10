@@ -1,0 +1,6 @@
+{ "users": [{
+    "userName": "Test",
+    "subreddit": ["reddevils", "soccer"],
+    "userId": 1
+  }]
+}

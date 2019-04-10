@@ -5,17 +5,17 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <a class="navbar-brand" routerLink="">Tidder</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="subreddits">Subreddits</a>
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/subreddits">Subreddits<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About Us</a>
+        <a class="nav-link" routerLink="/about">About Us</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,22 +65,15 @@
         <br>
         <div *ngIf="(testUser | async)?.userName">
           <div class="title">
-            <h2>Here are 3 top posts in each of your subreddit</h2>
-            <div *ngFor="let subreddit of (testUser | async)?.subreddit">
-              <div class="card top3Post">
-                <h4 class="card-header">{{subreddit}}</h4>
-                <div class="card-body">
-                  <h5 class="card-title">Post1</h5>
-                  <p class="card-text">Post1</p>
-                </div>
-              </div>
-              <br><br>
+            <h3>Here are your subscribed subreddits:</h3>
+            <div *ngFor="let sub of (testUser | async)?.subreddit">
+              <a routerLink="/subreddits/{{sub}}">{{sub}}</a>
             </div>
           </div>
         </div>
         <div *ngIf="(testUser | async)?.userName.length < 1">
           <div class="title">
-            <h2>Here are the popular post for today!</h2>
+            <h2>Here are the lists of all subreddits</h2>
           </div>
         </div>
     </div>

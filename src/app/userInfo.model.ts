@@ -1,4 +1,4 @@
 export class UserInfo {
-  public loggedIn: boolean = false;
+  public loggedIn = false;
   constructor(public userName: string, public subreddit: string[], public userId: number) {}
 }

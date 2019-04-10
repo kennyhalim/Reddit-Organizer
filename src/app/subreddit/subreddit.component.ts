@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { UserinfoService } from '../userinfo.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
+
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css'],
+  selector: 'app-subreddit',
+  templateUrl: './subreddit.component.html',
+  styleUrls: ['./subreddit.component.css'],
   providers: [UserinfoService]
 })
-export class WelcomeComponent implements OnInit {
+export class SubredditComponent implements OnInit {
   title = 'Reddit Organizer';
   users: FirebaseListObservable<any[]>;
   testUser;
@@ -20,6 +21,9 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
     this.users = this.userInfoService.getUser();
     this.testUser = this.userInfoService.getFirstUser();
+  }
+
+  goToDetailPage(clickedSub) {
   }
 
 }
