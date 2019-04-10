@@ -65,7 +65,9 @@
         <br>
         <div *ngIf="(testUser | async)?.userName">
           <div class="title">
-
+            Username: {{(testUser | async)?.userName}}
+            <button>Edit</button>
+            <app-edit-account [selectedUser]="testUser"></app-edit-account>
           </div>
         </div>
         <div *ngIf="(testUser | async)?.userName.length < 1">

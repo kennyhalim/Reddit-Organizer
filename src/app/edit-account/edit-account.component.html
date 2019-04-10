@@ -1,0 +1,7 @@
+<h4>Edit {{(selectedUser | async)?.userName}}</h4>
+
+<label>New Username: </label>
+<input [ngModel]="(selectedUser | async)?.userName" (ngModelChange)="selectedUser.userName=$event">
+<br>
+
+<button (click)="beginUpdatingUser(selectedUser)">Update</button>

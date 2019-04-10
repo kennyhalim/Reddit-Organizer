@@ -17,4 +17,13 @@ export class UserinfoService {
   getFirstUser() {
     return this.database.object('users/' + 0);
   }
+
+  getUserById(userId: string) {
+    return this.database.object('users/' + userId);
+  }
+
+  updateUser(localUpdatedUser) {
+    const userEntryInFirebase = this.getFirstUser();
+    userEntryInFirebase.update({userName: localUpdatedUser.userName});
+  }
 }
