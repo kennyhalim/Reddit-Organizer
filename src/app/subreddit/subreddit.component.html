@@ -69,11 +69,18 @@
             <div *ngFor="let sub of (testUser | async)?.subreddit">
               <a routerLink="/subreddits/{{sub}}">{{sub}}</a>
             </div>
+            <h3>Here are the lists of all available subreddits</h3>
+            <div *ngFor="let sub of subreddits | async">
+              <a routerLink="/subreddits/{{sub.name}}">{{sub.name}}</a> 
+            </div>
           </div>
         </div>
         <div *ngIf="(testUser | async)?.userName.length < 1">
           <div class="title">
-            <h2>Here are the lists of all subreddits</h2>
+            <h2>Here are the lists of all available subreddits</h2>
+            <div *ngFor="let sub of subreddits | async">
+              <a routerLink="/subreddits/{{sub.name}}">{{sub.name}}</a>
+            </div>
           </div>
         </div>
     </div>

@@ -3,18 +3,13 @@ import { UserInfo } from './userInfo.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
-export class UserinfoService {
-  users: FirebaseListObservable<any[]>;
+export class SubredditsService {
+  subreddits: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
-    this.users = database.list('users');
+    this.subreddits = database.list('subreddits');
   }
 
-
-  getUser() {
-    return this.users;
-  }
-
-  getFirstUser() {
-    return this.database.object('users/' + 0);
+  getSubreddits() {
+    return this.subreddits;
   }
 }

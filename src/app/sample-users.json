@@ -2,5 +2,30 @@
     "userName": "Test",
     "subreddit": ["reddevils", "soccer"],
     "userId": 1
-  }]
+  }],
+  "subreddits": [{
+    "name": "all"
+    }, {
+    "name": "askreddit"
+    }, {
+    "name": "lifeprotips"
+    }, {
+    "name": "marvelstudios"
+    }, {
+    "name": "movies"
+    }, {
+    "name": "nba"
+    }, {
+    "name": "reddevils"
+    }, {
+    "name": "lifeprotips"
+    }, {
+    "name": "showerthoughts"
+    }, {
+    "name": "soccer"
+    }, {
+    "name": "tifu"
+    }, {
+    "name": "todayilearned"
+    }]
 }
