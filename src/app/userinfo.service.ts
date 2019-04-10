@@ -9,7 +9,6 @@ export class UserinfoService {
     this.users = database.list('users');
   }
 
-
   getUser() {
     return this.users;
   }

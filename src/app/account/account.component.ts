@@ -14,12 +14,17 @@ export class AccountComponent implements OnInit {
   title = 'Your Account';
   users: FirebaseListObservable<any[]>;
   testUser;
+  editShown = false;
 
   constructor(private router: Router, private userInfoService: UserinfoService) {}
 
   ngOnInit() {
     this.users = this.userInfoService.getUser();
     this.testUser = this.userInfoService.getFirstUser();
+  }
+
+  editAccount() {
+    this.editShown = !(this.editShown);
   }
 
 }
