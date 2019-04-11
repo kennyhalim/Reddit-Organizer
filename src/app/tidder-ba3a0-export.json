@@ -1,0 +1,36 @@
+{
+  "subreddits" : [ {
+    "name" : "all"
+  }, {
+    "name" : "askreddit"
+  }, {
+    "name" : "lifeprotips"
+  }, {
+    "name" : "marvelstudios"
+  }, {
+    "name" : "movies"
+  }, {
+    "name" : "nba"
+  }, {
+    "name" : "reddevils"
+  }, {
+    "name" : "lifeprotips"
+  }, {
+    "name" : "showerthoughts"
+  }, {
+    "name" : "soccer"
+  }, {
+    "name" : "tifu"
+  }, {
+    "name" : "todayilearned"
+  } ],
+  "users" : [ {
+    "subreddit" : [{
+      "reddevils" : "reddevils",
+      "soccer" : "soccer",
+      "funny" : "funny"
+    }],
+    "userId" : 1,
+    "userName" : "Test"
+  } ]
+}

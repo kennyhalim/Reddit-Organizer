@@ -70,6 +70,14 @@
             <div *ngIf="editShown == true">
               <app-edit-account [selectedUser]="testUser"></app-edit-account>
             </div>
+            <p>Subscribed Subreddit(s):</p>
+            <div *ngFor="let sub of (testUser | async)?.subreddit; let i = index;">
+              <p><a routerLink="/subreddits/{{sub}}">{{sub}}</a> <button (click)="deleteSub(i)"> Remove</button></p>
+            </div>
+            <p>Available Subreddit(s):</p>
+            <div *ngFor="let sub of subreddits | async">
+              <p><a routerLink="/subreddits/{{sub.name}}">{{sub.name}}</a> <button (click)="addToSubList(sub.name)"> Add</button></p>
+            </div>
           </div>
         </div>
         <div *ngIf="(testUser | async)?.userName.length < 1">

@@ -5,8 +5,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class UserinfoService {
   users: FirebaseListObservable<any[]>;
+  userSubs: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
     this.users = database.list('users');
+    this.subreddits = database.list('subreddits');
+    this.userSubs = database.list('users/' + 0 + '/subreddit');
   }
 
   getUser() {
@@ -21,8 +24,23 @@ export class UserinfoService {
     return this.database.object('users/' + userId);
   }
 
+  getUserSubs() {
+    return this.database.object('users/' + 0 + '/subreddit');
+  }
+
   updateUser(localUpdatedUser) {
     const userEntryInFirebase = this.getFirstUser();
     userEntryInFirebase.update({userName: localUpdatedUser.userName});
+  }
+
+  deleteSub(localSubToDelete) {
+    console.log(localSubToDelete.key);
+    const userEntryInFirebase = this.getFirstUser();
+    this.database.object('/users/' + 0 + '/subreddit/' + localSubToDelete).remove();
+  }
+
+  addSub(localSubToAdd) {
+    const userEntryInFirebase = this.getUserSubs();
+    this.userSubs.push(localSubToAdd);
   }
 }
