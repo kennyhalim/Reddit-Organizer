@@ -43,8 +43,10 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
-        <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-          <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+        <div *ngIf="(testUser | async)?.subreddit">
+          <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+            <a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a>
+          </div>
         </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
@@ -66,8 +68,10 @@
         <div *ngIf="(testUser | async)?.userName">
           <div class="title">
             <h3>Here are your subscribed subreddits:</h3>
-            <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-              <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+            <div *ngIf="(testUser | async)?.subreddit">
+              <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+                <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+              </div>
             </div>
             <h3>Here are the lists of all available subreddits</h3>
             <div *ngFor="let sub of subreddits | async">

@@ -25,16 +25,6 @@ export class SubredditComponent implements OnInit {
     this.users = this.userInfoService.getUser();
     this.testUser = this.userInfoService.getFirstUser();
     this.subreddits = this.subredditsService.getSubreddits();
-    // this.subreddits.subscribe(subreddits => {
-    // subreddits.forEach(sub => {
-    //     this.subredditCount = this.subredditCount + 1;
-    //   });
-    // });
-    // this.testUser.subscribe(testUser => {
-    // testUser.subreddit.forEach(user => {
-    //     this.subscribedCount = this.subscribedCount + 1;
-    //   });
-    // });
 
     }
 

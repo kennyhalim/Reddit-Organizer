@@ -43,8 +43,10 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
-        <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-          <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+        <div *ngIf="(testUser | async)?.subreddit">
+          <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+            <a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a>
+          </div>
         </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
@@ -65,15 +67,17 @@
         <br>
         <div *ngIf="(testUser | async)?.userName">
           <div class="title">
-            <h2>Here are 3 top posts in each of your subreddit</h2>
-            <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-              <div class="card top3Post">
-                <h4 class="card-header"><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}}</a></h4>
-                <div class="card-body">
-                  <h5 class="card-title">Post1</h5>
-                  <p class="card-text">Post1</p>
+            <div *ngIf="(testUser | async)?.subreddit">
+              <h2>Here are 3 top posts in each of your subreddit</h2>
+              <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+                <div class="card top3Post">
+                  <h4 class="card-header"><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}}</a></h4>
+                  <div class="card-body">
+                    <h5 class="card-title">Post1</h5>
+                    <p class="card-text">Post1</p>
+                  </div>
                 </div>
-              </div>
+                </div>
               <br><br>
             </div>
           </div>

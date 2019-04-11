@@ -43,8 +43,10 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
+        <div *ngIf="(testUser | async)?.subreddit">
         <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-          <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+          <a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a>
+        </div>
         </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
@@ -72,8 +74,10 @@
             </div>
             <br><br>
             <p>Subscribed Subreddit(s):</p>
-            <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
-              <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a> <button (click)="deleteSub(key)"> Remove</button></p>
+            <div *ngIf="(testUser | async)?.subreddit">
+              <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+                <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a> <button (click)="deleteSub(key)"> Remove</button></p>
+              </div>
             </div>
             <p>Available Subreddit(s):</p>
             <div *ngFor="let sub of subreddits | async">
