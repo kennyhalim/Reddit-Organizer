@@ -18,7 +18,7 @@ export class AccountComponent implements OnInit {
   testUser;
   userSubs;
   editShown = false;
-  subToDisplay;
+  objectKeys = Object.keys;
 
   constructor(private router: Router, private userInfoService: UserinfoService, private subredditsService: SubredditsService ) {}
 
@@ -37,13 +37,15 @@ export class AccountComponent implements OnInit {
   }
 
   deleteSub(sub) {
-    if (confirm('Are you sure you want to delete this item from the inventory?')) {
+    if (confirm('Are you sure you want to delete this subreddit from your subscribed subreddit list?')) {
       this.userInfoService.deleteSub(sub);
     }
   }
 
   addToSubList(sub) {
-    this.userInfoService.addSub(sub);
+    if (confirm('Are you sure you want to add this subreddit to your subscribed subreddit list?')) {
+      this.userInfoService.addSub(sub);
+    }
   }
 
 

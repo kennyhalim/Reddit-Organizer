@@ -5,6 +5,7 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class UserinfoService {
   users: FirebaseListObservable<any[]>;
+  subreddits: FirebaseListObservable<any[]>;
   userSubs: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
     this.users = database.list('users');
@@ -34,13 +35,12 @@ export class UserinfoService {
   }
 
   deleteSub(localSubToDelete) {
-    console.log(localSubToDelete.key);
     const userEntryInFirebase = this.getFirstUser();
     this.database.object('/users/' + 0 + '/subreddit/' + localSubToDelete).remove();
   }
 
   addSub(localSubToAdd) {
     const userEntryInFirebase = this.getUserSubs();
-    this.userSubs.push(localSubToAdd);
+    this.userSubs.push({name: localSubToAdd});
   }
 }
