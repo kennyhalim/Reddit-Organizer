@@ -16,6 +16,7 @@ export class SubredditComponent implements OnInit {
   users: FirebaseListObservable<any[]>;
   subreddits: FirebaseListObservable<any[]>;
   testUser;
+  objectKeys = Object.keys;
   // subredditCount = 0;
   // subscribedCount = 0;
   constructor(private router: Router, private userInfoService: UserinfoService, private subredditsService: SubredditsService) {}

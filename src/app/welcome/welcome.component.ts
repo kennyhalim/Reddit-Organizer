@@ -14,7 +14,8 @@ export class WelcomeComponent implements OnInit {
   title = 'Reddit Organizer';
   users: FirebaseListObservable<any[]>;
   testUser;
-
+  objectKeys = Object.keys;
+  
   constructor(private router: Router, private userInfoService: UserinfoService) {}
 
   ngOnInit() {

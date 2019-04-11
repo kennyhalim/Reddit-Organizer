@@ -43,8 +43,8 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
-        <div *ngFor="let subreddit of (testUser | async)?.subreddit">
-          {{subreddit}}
+        <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+          <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
         </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
@@ -66,9 +66,9 @@
         <div *ngIf="(testUser | async)?.userName">
           <div class="title">
             <h2>Here are 3 top posts in each of your subreddit</h2>
-            <div *ngFor="let subreddit of (testUser | async)?.subreddit">
+            <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
               <div class="card top3Post">
-                <h4 class="card-header"><a routerLink="/subreddits/{{subreddit}}">{{subreddit}}</a></h4>
+                <h4 class="card-header"><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}}</a></h4>
                 <div class="card-body">
                   <h5 class="card-title">Post1</h5>
                   <p class="card-text">Post1</p>

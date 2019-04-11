@@ -43,9 +43,9 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
-        <!-- <div *ngFor="let subreddit of (testUser | async)?.subreddit">
-          {{subreddit}}
-        </div> -->
+        <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+          <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a></p>
+        </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
         <form>
@@ -70,10 +70,8 @@
             <div *ngIf="editShown == true">
               <app-edit-account [selectedUser]="testUser"></app-edit-account>
             </div>
+            <br><br>
             <p>Subscribed Subreddit(s):</p>
-            <!-- <div *ngFor="let sub of (testUser | async)?.subreddit; let i = index;">
-              <p><a routerLink="/subreddits/{{sub}}">{{sub}}</a> <button (click)="deleteSub(i)"> Remove</button></p>
-            </div> -->
             <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
               <p><a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a> <button (click)="deleteSub(key)"> Remove</button></p>
             </div>
