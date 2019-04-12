@@ -43,8 +43,10 @@
       <div *ngIf="(testUser | async)?.userName">
         <p>Welcome, {{(testUser | async)?.userName}}<p>
         <h4>Your subreddits:</h4>
-        <div *ngFor="let subreddit of (testUser | async)?.subreddit">
-          {{subreddit}}
+        <div *ngIf="(testUser | async)?.subreddit">
+          <div *ngFor="let key of objectKeys((testUser | async)?.subreddit)">
+            <a routerLink="/subreddits/{{((testUser | async)?.subreddit)[key].name}}">{{((testUser | async)?.subreddit)[key].name}} </a>
+          </div>
         </div>
       </div>
       <div *ngIf="(testUser | async)?.userName.length < 1">
@@ -62,10 +64,21 @@
       <div class="title">
         <h1>r/Reddevils</h1>
       </div>
-      <div *ngIf=posts>
-      <div *ngFor="let number of [2,3,4,5,6,7,8,9,10]">
-        <p>{{posts.data.children[number].data.title}}</p>
+      <div *ngIf=posts class="title">
+        <div *ngFor="let number of [2,3,4,5,6,7,8,9,10]">
+          <p></p>
+          <div class="card top3Post">
+            <h5 class="card-header">
+              {{posts.data.children[number].data.title}}
+            </h5>
+            <div class="card-body">
+              <p class="card-text"> <strong>{{posts.data.children[number].data.score}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by {{posts.data.children[number].data.author}}</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <div *ngIf="posts===null" class="title loading">
+        <img src="/assets/images/loading.gif" />
       </div>
     </div>
   </div>
