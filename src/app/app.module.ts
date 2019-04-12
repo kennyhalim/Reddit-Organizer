@@ -13,6 +13,7 @@ import { ReddevilsComponent } from './reddevils/reddevils.component';
 import { AccountComponent } from './account/account.component';
 import { EditAccountComponent } from './edit-account/edit-account.component';
 import { HttpModule } from '@angular/http';
+import { AllComponent } from './all/all.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     SubredditComponent,
     ReddevilsComponent,
     AccountComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    AllComponent
   ],
   imports: [
     BrowserModule,
