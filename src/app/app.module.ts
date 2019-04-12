@@ -12,6 +12,7 @@ import { SubredditComponent } from './subreddit/subreddit.component';
 import { ReddevilsComponent } from './reddevils/reddevils.component';
 import { AccountComponent } from './account/account.component';
 import { EditAccountComponent } from './edit-account/edit-account.component';
+import { HttpModule } from '@angular/http';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,6 +34,7 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
