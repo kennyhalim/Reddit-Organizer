@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { ReddevilsService } from '../reddevils.service';
 
@@ -8,13 +8,18 @@ import { ReddevilsService } from '../reddevils.service';
   styleUrls: ['./reddevils.component.css'],
   providers: [ReddevilsService]
 })
-export class ReddevilsComponent {
+export class ReddevilsComponent implements OnInit {
   posts: any[] = null;
   constructor(private reddevilsService: ReddevilsService) { }
-  getData() {
-    this.reddevilsService.getPost().subscribe(response => {
-      this.posts = response.json();
-    });
+
+  ngOnInit() {
+    this.getPost();
   }
 
+  getPost() {
+    this.reddevilsService.getPost().subscribe(response => {
+      this.posts = response.json();
+      console.log(this.posts);
+    });
+  }
 }
