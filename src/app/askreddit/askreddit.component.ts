@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { AllService } from '../all.service';
+import { AskredditService } from '../askreddit.service';
 import { Observable } from 'rxjs/Observable';
 import { UserinfoService } from '../userinfo.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-all',
-  templateUrl: './all.component.html',
-  styleUrls: ['./all.component.css'],
-  providers: [AllService, UserinfoService]
+  selector: 'app-askreddit',
+  templateUrl: './askreddit.component.html',
+  styleUrls: ['./askreddit.component.css'],
+  providers: [AskredditService, UserinfoService]
 })
-export class AllComponent implements OnInit {
+export class AskredditComponent implements OnInit {
   posts: any[] = null;
   users: FirebaseListObservable<any[]>;
   testUser;
   objectKeys = Object.keys;
-  constructor(private allService: AllService, private userInfoService: UserinfoService) { }
+  constructor(private askredditService: AskredditService, private userInfoService: UserinfoService) { }
 
   ngOnInit() {
     this.getPost();
@@ -24,7 +24,7 @@ export class AllComponent implements OnInit {
   }
 
   getPost() {
-    this.allService.getPost().subscribe(response => {
+    this.askredditService.getPost().subscribe(response => {
       this.posts = response.json();
     });
   }

@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { SubredditComponent } from './subreddit/subreddit.component';
 import { ReddevilsComponent } from './reddevils/reddevils.component';
 import { AllComponent } from './all/all.component';
+import { AskredditComponent } from './askreddit/askreddit.component';
 import { AccountComponent } from './account/account.component';
 const appRoutes: Routes = [
   {
@@ -30,7 +31,11 @@ const appRoutes: Routes = [
   {
     path: 'subreddits/all',
     component: AllComponent
-  }
+  },
+  {
+    path: 'subreddits/askreddit',
+    component: AskredditComponent
+  },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

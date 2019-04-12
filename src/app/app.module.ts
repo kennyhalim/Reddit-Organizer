@@ -14,6 +14,7 @@ import { AccountComponent } from './account/account.component';
 import { EditAccountComponent } from './edit-account/edit-account.component';
 import { HttpModule } from '@angular/http';
 import { AllComponent } from './all/all.component';
+import { AskredditComponent } from './askreddit/askreddit.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     ReddevilsComponent,
     AccountComponent,
     EditAccountComponent,
-    AllComponent
+    AllComponent,
+    AskredditComponent
   ],
   imports: [
     BrowserModule,
