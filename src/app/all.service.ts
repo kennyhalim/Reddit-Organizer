@@ -34,4 +34,20 @@ export class AllService {
   getRReddevils() {
     return this.http.get(`https://www.reddit.com/r/reddevils.json`);
   }
+
+  getRShowerthoughts() {
+    return this.http.get(`https://www.reddit.com/r/showerthoughts.json`);
+  }
+
+  getRSoccer() {
+    return this.http.get(`https://www.reddit.com/r/soccer.json`);
+  }
+
+  getRTifu() {
+    return this.http.get(`https://www.reddit.com/r/tifu.json`);
+  }
+
+  getRTil() {
+    return this.http.get(`https://www.reddit.com/r/todayilearned.json`);
+  }
 }

@@ -10,6 +10,10 @@ import { LifeprotipsComponent } from './lifeprotips/lifeprotips.component';
 import { MarvelstudiosComponent } from './marvelstudios/marvelstudios.component';
 import { MoviesComponent } from './movies/movies.component';
 import { NbaComponent } from './nba/nba.component';
+import { ShowerthoughtsComponent } from './showerthoughts/showerthoughts.component';
+import { SoccerComponent } from './soccer/soccer.component';
+import { TifuComponent } from './tifu/tifu.component';
+import { TodayilearnedComponent } from './todayilearned/todayilearned.component';
 import { AccountComponent } from './account/account.component';
 const appRoutes: Routes = [
   {
@@ -56,6 +60,22 @@ const appRoutes: Routes = [
     path: 'subreddits/nba',
     component: NbaComponent
   },
+  {
+    path: 'subreddits/showerthoughts',
+    component: ShowerthoughtsComponent
+  },
+  {
+    path: 'subreddits/soccer',
+    component: SoccerComponent
+  },
+  {
+    path: 'subreddits/tifu',
+    component: TifuComponent
+  },
+  {
+    path: 'subreddits/todayilearned',
+    component: TodayilearnedComponent
+  }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

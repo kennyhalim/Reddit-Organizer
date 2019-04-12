@@ -19,6 +19,10 @@ import { LifeprotipsComponent } from './lifeprotips/lifeprotips.component';
 import { MarvelstudiosComponent } from './marvelstudios/marvelstudios.component';
 import { MoviesComponent } from './movies/movies.component';
 import { NbaComponent } from './nba/nba.component';
+import { ShowerthoughtsComponent } from './showerthoughts/showerthoughts.component';
+import { SoccerComponent } from './soccer/soccer.component';
+import { TifuComponent } from './tifu/tifu.component';
+import { TodayilearnedComponent } from './todayilearned/todayilearned.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -41,7 +45,11 @@ export const firebaseConfig = {
     LifeprotipsComponent,
     MarvelstudiosComponent,
     MoviesComponent,
-    NbaComponent
+    NbaComponent,
+    ShowerthoughtsComponent,
+    SoccerComponent,
+    TifuComponent,
+    TodayilearnedComponent
   ],
   imports: [
     BrowserModule,
