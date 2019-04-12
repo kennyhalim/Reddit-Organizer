@@ -5,17 +5,17 @@ import { UserinfoService } from '../userinfo.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-askreddit',
-  templateUrl: './askreddit.component.html',
-  styleUrls: ['./askreddit.component.css'],
+  selector: 'app-lifeprotips',
+  templateUrl: './lifeprotips.component.html',
+  styleUrls: ['./lifeprotips.component.css'],
   providers: [AllService, UserinfoService]
 })
-export class AskredditComponent implements OnInit {
+export class LifeprotipsComponent implements OnInit {
   posts: any[] = null;
   users: FirebaseListObservable<any[]>;
   testUser;
   objectKeys = Object.keys;
-  constructor(private askredditService: AllService, private userInfoService: UserinfoService) { }
+  constructor(private lifeprotipsService: AllService, private userInfoService: UserinfoService) { }
 
   ngOnInit() {
     this.getPost();
@@ -24,7 +24,7 @@ export class AskredditComponent implements OnInit {
   }
 
   getPost() {
-    this.askredditService.getRAskreddit().subscribe(response => {
+    this.lifeprotipsService.getRLifeprotips().subscribe(response => {
       this.posts = response.json();
     });
   }

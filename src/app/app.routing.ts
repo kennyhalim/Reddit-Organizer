@@ -6,6 +6,7 @@ import { SubredditComponent } from './subreddit/subreddit.component';
 import { ReddevilsComponent } from './reddevils/reddevils.component';
 import { AllComponent } from './all/all.component';
 import { AskredditComponent } from './askreddit/askreddit.component';
+import { LifeprotipsComponent } from './lifeprotips/lifeprotips.component';
 import { AccountComponent } from './account/account.component';
 const appRoutes: Routes = [
   {
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
   {
     path: 'subreddits/askreddit',
     component: AskredditComponent
+  },
+  {
+    path: 'subreddits/lifeprotips',
+    component: LifeprotipsComponent
   },
 ];
 

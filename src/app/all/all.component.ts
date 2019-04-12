@@ -24,7 +24,7 @@ export class AllComponent implements OnInit {
   }
 
   getPost() {
-    this.allService.getPost().subscribe(response => {
+    this.allService.getRAll().subscribe(response => {
       this.posts = response.json();
     });
   }

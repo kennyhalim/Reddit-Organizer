@@ -15,6 +15,10 @@ import { EditAccountComponent } from './edit-account/edit-account.component';
 import { HttpModule } from '@angular/http';
 import { AllComponent } from './all/all.component';
 import { AskredditComponent } from './askreddit/askreddit.component';
+import { LifeprotipsComponent } from './lifeprotips/lifeprotips.component';
+import { MarvelstudiosComponent } from './marvelstudios/marvelstudios.component';
+import { MoviesComponent } from './movies/movies.component';
+import { NbaComponent } from './nba/nba.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +37,11 @@ export const firebaseConfig = {
     AccountComponent,
     EditAccountComponent,
     AllComponent,
-    AskredditComponent
+    AskredditComponent,
+    LifeprotipsComponent,
+    MarvelstudiosComponent,
+    MoviesComponent,
+    NbaComponent
   ],
   imports: [
     BrowserModule,
