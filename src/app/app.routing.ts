@@ -7,6 +7,9 @@ import { ReddevilsComponent } from './reddevils/reddevils.component';
 import { AllComponent } from './all/all.component';
 import { AskredditComponent } from './askreddit/askreddit.component';
 import { LifeprotipsComponent } from './lifeprotips/lifeprotips.component';
+import { MarvelstudiosComponent } from './marvelstudios/marvelstudios.component';
+import { MoviesComponent } from './movies/movies.component';
+import { NbaComponent } from './nba/nba.component';
 import { AccountComponent } from './account/account.component';
 const appRoutes: Routes = [
   {
@@ -40,6 +43,18 @@ const appRoutes: Routes = [
   {
     path: 'subreddits/lifeprotips',
     component: LifeprotipsComponent
+  },
+  {
+    path: 'subreddits/marvelstudios',
+    component: MarvelstudiosComponent
+  },
+  {
+    path: 'subreddits/movies',
+    component: MoviesComponent
+  },
+  {
+    path: 'subreddits/nba',
+    component: NbaComponent
   },
 ];
 
