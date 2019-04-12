@@ -19,7 +19,6 @@ export class ReddevilsComponent implements OnInit {
   getPost() {
     this.reddevilsService.getPost().subscribe(response => {
       this.posts = response.json();
-      console.log(this.posts);
     });
   }
 }

@@ -35,7 +35,7 @@
   </div>
 </nav>
 
-<!-- <div class="container-fluid">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-2" id="sidebar">
       <img id="logo" src="https://ya-webdesign.com/images/reddit-alien-png-3.png">
@@ -62,11 +62,12 @@
       <div class="title">
         <h1>r/Reddevils</h1>
       </div>
-        <br>
-        blallablabla
+      <div *ngIf=posts>
+      <div *ngFor="let number of [2,3,4,5,6,7,8,9,10]">
+        <p>{{posts.data.children[number].data.title}}</p>
+      </div>
+      </div>
     </div>
   </div>
 
-</div> -->
-
-<h2> From {{posts.data.children[0].data.subreddit}}</h2>
+</div>
