@@ -50,4 +50,8 @@ export class AllService {
   getRTil() {
     return this.http.get(`https://www.reddit.com/r/todayilearned.json`);
   }
+
+  getR(sub) {
+    return this.http.get(`https://www.reddit.com/r/` + sub + `.json`);
+  }
 }
